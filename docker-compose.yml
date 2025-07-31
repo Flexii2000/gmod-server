@@ -15,9 +15,9 @@ services:
       # Optional:
       # PASSWORD: ${PASSWORD}
       # RCONPASSWORD: ${RCONPASSWORD}
-      # WORKSHOPID: "123456789"
-      # WORKSHOPDL: "true"
-      # WORKSHOP_AUTHKEY: ${WORKSHOP_AUTHKEY}
+      WORKSHOPID: "852620310"
+      WORKSHOPDL: "true"
+      WORKSHOP_AUTHKEY: ${WORKSHOP_AUTHKEY}
     volumes:
       - ./garrysmod:/home/steam/garrysmod
 
