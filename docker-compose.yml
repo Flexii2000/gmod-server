@@ -2,22 +2,18 @@ version: "3.8"
 
 services:
   gmod:
-    image: phyremaster/easy-gmod
+    image: cm2network/garrysmod
     container_name: gmod_ttt
     ports:
       - "27015:27015/udp"
       - "27015:27015/tcp"
     environment:
-      GAMEMODE: terrortown
-      MAP: ttt_minecraft_b5
-      MAXPLAYERS: 20
-      HOSTNAME: "Flexii’s TTT Server"
-      # Optional:
-      # PASSWORD: ${PASSWORD}
-      # RCONPASSWORD: ${RCONPASSWORD}
-      WORKSHOPID: "852620310"
-      WORKSHOPDL: "true"
-      WORKSHOP_AUTHKEY: ${WORKSHOP_AUTHKEY}
+      SRCDS_GAMEMODE: terrortown
+      SRCDS_MAP: ttt_minecraft_b5
+      SRCDS_MAXPLAYERS: 20
+      SRCDS_HOSTNAME: "Flexii's TTT Server"
+      SRCDS_TICKRATE: 66
+      SRCDS_WORKSHOP_AUTHKEY: ${WORKSHOP_AUTHKEY}
+      SRCDS_HOST_WORKSHOP_COLLECTION: "852620310"
     volumes:
       - ./garrysmod:/home/steam/garrysmod
-
