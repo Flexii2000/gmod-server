@@ -17,4 +17,4 @@ services:
     volumes:
       - ./garrysmod:/home/gmod/server/garrysmod
       - ./steam:/home/gmod/Steam
-      - ./server:/home/gmod/server
+      #- ./server:/home/gmod/server
