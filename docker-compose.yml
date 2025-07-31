@@ -16,5 +16,5 @@ services:
       ARGS: "+host_workshop_collection 852620310"
     volumes:
       - ./garrysmod:/home/gmod/server/garrysmod
-      - ./garrysmod:/home/gmod/server/garrysmod
       - ./steam:/home/gmod/Steam
+      - ./server:/home/gmod/server
