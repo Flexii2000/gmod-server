@@ -6,11 +6,11 @@ services:
       - "27015:27015/udp"
       - "27015:27015/tcp"
     environment:
-      PRODUCTION: "1"
+      PRODUCTION: "0"
       HOSTNAME: "Flexii’s TTT Server"
       MAXPLAYERS: "20"
       GAMEMODE: "terrortown"
-      MAP: "ttt_minecraft_b5"
+      MAP: "gm_construct"
       GSLT: "${GSLT_TOKEN}"
       ARGS: "+host_workshop_collection 852620310"
     volumes:
