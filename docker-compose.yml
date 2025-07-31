@@ -1,5 +1,3 @@
-version: "3.8"
-
 services:
   gmod:
     image: ceifa/garrysmod:latest
@@ -8,12 +6,12 @@ services:
       - "27015:27015/udp"
       - "27015:27015/tcp"
     environment:
+      PRODUCTION: "1"
+      HOSTNAME: "Flexii’s TTT Server"
+      MAXPLAYERS: "20"
       GAMEMODE: "terrortown"
       MAP: "ttt_minecraft_b5"
-      MAXPLAYERS: "20"
-      HOSTNAME: "Flexii’s TTT Server"
-      WORKSHOPCOLLECTIONID: "852620310"
-      WORKSHOP_AUTHKEY: "${WORKSHOP_AUTHKEY}"
-      PRODUCTION: "1"
+      GSLT: "${GSLT_TOKEN}"
+      ARGS: "+host_workshop_collection 852620310"
     volumes:
       - ./garrysmod:/home/gmod/server/garrysmod
